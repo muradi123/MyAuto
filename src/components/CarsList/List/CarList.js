@@ -10,7 +10,7 @@ const Grid = tw.div`
    grid
    grid-cols-[1fr]
    gap-5
-   md:grid-cols-[1fr,3fr]
+   md:grid-cols-[250px,3fr]
 `;
 
 const CarListContainer = tw.div` 
@@ -18,12 +18,15 @@ const CarListContainer = tw.div`
    grid-cols-1
    justify-self-center
    gap-5
-   mt-5
+   mt-3
+   md:mt-14
    md:justify-self-auto
 `;
 
 const Title = tw.div`
    text-[#272A37]
+   font-normal
+   mt-1.5
 `;
 
 const Sorter = tw.div` 
@@ -53,7 +56,7 @@ const CarList = () => {
     <InnerContainer>
       <Grid>
         <SearchForm />
-        <CarListContainer>
+        <CarListContainer className='h-max w-full'>
           <Sorter>
             <Title>{products.length} განცხადება</Title>
             <SorterSection />
@@ -75,6 +78,7 @@ const CarList = () => {
                     rightWhell={item.right_wheel}
                     views={item.views}
                     customsPassed={item?.customs_passed}
+                    fuel_type_id={item?.fuel_type_id}
                     price={item.price}
                     priceInLari={item.price_value}
                     isDollar={isDollar}
@@ -101,6 +105,7 @@ const CarList = () => {
                   views={item.views}
                   customsPassed={item?.customs_passed}
                   price={item.price}
+                  fuel_type_id={item?.fuel_type_id}
                   priceInLari={item.price_value}
                   isDollar={isDollar}
                 />

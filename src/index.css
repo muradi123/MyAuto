@@ -12,6 +12,7 @@
 
 body {
   background: #e5e5e5;
+  overflow-x: hidden;
   font-family: 'Noto Sans Georgian', sans-serif;
 }
 
@@ -25,5 +26,5 @@ input[type="number"] {
 }
 
 input[type='number']{
-  width: 130px;
+  width: 100%;
 } 

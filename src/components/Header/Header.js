@@ -18,8 +18,8 @@ const Logo = tw.div`
     bg-[#FD4100]
     w-max
     rounded-full
-    px-4
-    py-1.5
+    px-2
+    py-1
 `;
 
 const MyAutoTiTle = tw.div`
@@ -28,7 +28,7 @@ const MyAutoTiTle = tw.div`
     text-black
     bg-[#fff]
     rounded-full
-    px-2
+    px-3
     py-1
 `;
 
